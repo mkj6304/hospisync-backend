@@ -8,9 +8,11 @@ const doctorRoutes = require('./routes/doctors');
 const hospitalDashboardRoutes = require('./routes/hospital');
 const patientRoutes = require('./routes/patients');
 
+const cors = require('cors');
+
 app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true // If you are sending cookies or using sessions
+  origin: 'https://your-frontend-url.com', // 👈 Replace this
+  credentials: true,
 }));
 
 
