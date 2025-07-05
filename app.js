@@ -11,7 +11,7 @@ const patientRoutes = require('./routes/patients');
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'https://your-frontend-url.com', // 👈 Replace this
+  origin: 'https://hospisync-frontend.vercel.app/', // 👈 Replace this
   credentials: true,
 }));
 
