@@ -19,7 +19,7 @@ app.use(cors({
 app.use(express.json());
 
 // Import authentication middleware
-const { authenticateToken, authorizeRoles } = require('./middleware/auth');
+//const { authenticateToken, authorizeRoles } = require('./middleware/auth');
 
 // Open authentication routes (no token needed)
 app.use('/api/auth', require('./routes/auth'));
