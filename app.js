@@ -30,9 +30,9 @@ const mlRoutes = require('./services/ml');
 
 
 // Sample secure route
-app.get('/api/secure', authenticateToken, (req, res) => {
+/*app.get('/api/secure', authenticateToken, (req, res) => {
   res.json({ message: `Hello ${req.user.username}, your role is ${req.user.role}` });
-});
+});*/
 
 
 app.use('/api/patient', patientRoutes);
