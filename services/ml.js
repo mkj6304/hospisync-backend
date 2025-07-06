@@ -1,7 +1,7 @@
 // services/ml.js
 const axios = require('axios');
 
-const ML_API_URL = 'http://localhost:5000/predict';
+const ML_API_URL = 'https://hospisync-ml-server.onrender.com';
 
 async function getAdmissionRecommendation(hospitalMetrics) {
   try {
