@@ -52,7 +52,7 @@ const hospitalMetrics = {
     // 🔮 ML recommendation
     const { recommendation, probability } = await getAdmissionRecommendation(hospitalMetrics);
 
-    if (recommendation !== 1) {
+    if (false && recommendation !== 1) {
       return res.status(403).json({
         message: `Admission denied by ML model. Confidence: ${(probability * 100).toFixed(2)}%`,
         recommendation
