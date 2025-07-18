@@ -9,10 +9,26 @@ const patientRoutes = require('./routes/patients');
 
 const cors = require('cors');
 
+const allowedOrigins = [
+  'https://hospisync-frontend.vercel.app',
+  'http://192.168.1.4', // Add dev URL too if needed
+  // add more origins if needed
+];
+
 app.use(cors({
-  origin: 'https://hospisync-frontend.vercel.app', // 👈 Replace this
-  credentials: true,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 }));
+// app.use(cors({
+//   origin: 'https://hospisync-frontend.vercel.app', // 👈 Replace this
+//   credentials: true,
+// }));
 
 
 // Middleware
